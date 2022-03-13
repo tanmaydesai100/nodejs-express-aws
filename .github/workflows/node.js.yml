@@ -1,16 +1,16 @@
 name: CI
-
+​
 on:
     push:
         branches: [ master ]
     
 jobs:
     deploy:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
     
     strategy: 
         matrix:
-            node-version: [12.x,14.x,16.x]
+            node-version: [12.x]
             
     steps:
       - uses: actions/checkout@v2
